@@ -1,4 +1,4 @@
-a website or open library where users can download the books available, search for them and also read articles.
+A website or open library where users can download the books available, search for them and also read articles.
 It's part of a personal project I'm working on. 
 Maybe I'll put it online one day. In the meantime, here's a first visual of the site (typography and colors will probably change in the future). 
 
