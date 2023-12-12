@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" style>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styles/styles.css">
+        <link rel="stylesheet" href="./styles/dropdownmenu.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap" rel="stylesheet">
+        <title>Library Management</title>
+        <meta property="og:title" content="Library's Home Page">
+        <meta property="og:url" content="https://pom-library.github.io">
+        <meta property="og:description" content="Library">
+        <meta name="description" content="PöM - Bibliothèque Personnelle">
+        <style type="text/css" id="operaUserStyle"></style>
+        <meta name="next-size-adjust">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <next-route-announcer style="position: absolute;">
+            <div aria-live="assertive" id="_next-route-announcer__" role="alert" style="position: absolute; border: 0px; height: 1px; margin:-1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap:normal;">Projects • Leo Meillier</div>
+        </next-route-announcer>
+        <div class="page">
+            <nav class>
+                <div class="name">
+                    <a href="./main.html">
+                        <label> PöM</label>
+                        <label> PöM</label>
+                    </a>
+                </div>
+                <button class="menu-icon" onclick="toggleMenu()">
+                    &#9776;
+                </button>                
+                <div class="nav-links">
+                    <div class="nav-l">
+                        <a href="./main.html">
+                            <label for>Library</label>
+                        </a>
+                        <span></span>
+                    </div>
+                    <div class="nav-l">
+                        <a href="./articles.html">
+                            <label for>Articles</label>
+                        </a>
+                        <span></span>
+                    </div>
+                    <div class="nav-l">
+                        <a href="https://www.instagram.com/piecesofmindfr/">
+                            <label for>PöM</label>
+                        </a>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+            <div class="projects slide-up">
+                <div class="projects-header">
+                    <label for>Library.</label>
+                </div>
+                <div class="projects-content">
+                    <p>
+                        Here is a selection of books that might interested you.
+                    </p>
+                    <div class="projects-img">
+                        <img src="./images/presentation/Étienne-Louis Boullée _ Juan I_ Derrasaga.jpg" alt>
+                        <label for>
+                            Royal Library (1785) by the Architect
+                            <a target="_blank" style="text-decoration: none;" href="https://gallica.bnf.fr/blog/13092022/la-bibliotheque-ideale-de-boullee?mode=desktop">
+                                Etienne-Louis Bouillée
+                                <span>↗</span>
+                            </a>
+                        </label>
+                    </div>
+                </div>
+                <div class="leos-projects">
+                    <div class="search-projects">
+                        <i class="bx bx-search">
+
+                        </i>
+                        <input id="searchbar" placeholder="Search a Book" type="text">
+                    </div>
+                    <div class="filter">
+                        <select id="genre-select">
+                            <option value="all">All Genres</option>
+                            <option value="novel">Novel</option>
+                            <option value="poem">Poem</option>
+                            <option value="history">History</option>
+                            <option value="bio">Biography</option>
+                            <option value="sciences">Sciences</option>
+                            <option value="art">Art & Architecture</option>
+                        </select>
+                        <select id="language-select">
+                            <option value="all">All Languages</option>
+                            <option value="english">English</option>
+                            <option value="french">French</option>
+                        </select>
+                        <select id="century-select">
+                            <option value="all">All Century</option>
+                            <option value="21">21th Century</option>
+                            <option value="20">20th Century</option>
+                            <option value="19">19th Century</option>
+                            <option value="18">18th Century</option>
+                            <option value="17">17th Century</option>
+                            <option value="16">16th Century</option>
+                            <option value="15">15th Century</option>
+                            <option value="moyenage">Middle Ages</option>
+                            <option value="antiquite">Ancient Greece & Rome</option>
+
+                        </select>
+                    </div>
+                    <div class="pom-list-books">
+                        <hr>
+                        <div class="latestrow" id="booknamesearch">
+                            <div class="latest-col" data-genre="sciences" data-language="english" data-century="21">
+                                <div class="limg">
+                                    <img src="./media/Exploring_the_Riemann_Zeta_Function.jpg">
+                                </div>
+                                <div class="info">
+                                    <label for>The Riemann Zeta Function</label>
+                                    <p>Hugh Montgomery & Others</p>
+                                    <a href="./Books/Exploring the Riemann Zeta Function 190 years from Riemann’s Birth (Hugh Montgomery, Ashkan Nikeghbali etc.) (Z-Library).pdf" download="Exploring the Riemann Zeta Function 190 years from Riemann’s Birth.pdf">
+                                        <button class="bookload-btn" onclick="href='./'" type="button">Download</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="latest-col" data-genre="novel" data-language="french" data-century="19">
+                                <div class="limg">
+                                    <img src="./media/Crime_et_Chatiment.jpg">
+                                </div>
+                                <div class="info">
+                                    <label for>Crime et Châtiment</label>
+                                    <p>Fiodor Dostoïevsky</p>
+                                    <a href="./Books/Crime et châtiment (Dostoïevski, Fédor Mikhaïlovitch) (z-lib.org).pdf" download="Crime et Châtiment - Dostoïevsky.pdf">
+                                        <button class="bookload-btn" onclick="href='./'" type="button">Download</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="latest-col" data-genre="novel" data-language="french" data-century="20">
+                                <div class="limg">
+                                    <img src="./media/Promesse_de_l'aube.jpg">
+                                </div>
+                                <div class="info">
+                                    <label for>La Promesse de L'aube</label>
+                                    <p>Romain Gary</p>
+                                    <a href="./Books/la-promesse-de-l-aube-romain-gary-1973-519474-pdf--annas-archive.pdf" download="La Promesse de l'Aube - Romain Gary.pdf">
+                                        <button class="bookload-btn" onclick="href='./'" type="button">Download</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="latest-col" data-genre="biography" data-language="english" data-century="21">
+                                <div class="limg">
+                                    <img src="./media/American_Prometheus.jpg">
+                                </div>
+                                <div class="info">
+                                    <label for>American Prometheus</label>
+                                    <p>Kai Bird & Martin J. Sherwin</p>
+                                    <a href="./Books/American Prometheus The Triumph and Tragedy of J. Robert Oppenheimer (Kai Bird, Martin J. Sherwin) (Z-Library).pdf" download="American Prometheus The Triumph and Tragedy of Oppenheimer.pdf">
+                                        <button class="bookload-btn" onclick="href='./'" type="button">Download</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="latest-col" data-genre="biography" data-language="french" data-century="21">
+                                <div class="limg">
+                                    <img src="./media/Leonard_de_Vinci_Isaacson.jpg">
+                                </div>
+                                <div class="info">
+                                    <label for>Leonard De Vinci - Bio</label>
+                                    <p>Walter Isaacson</p>
+                                    <a href="./Books/Léonard-de-Vinci (Isaacson Walter).pdf" download="Leonard de Vinci_Biographie - Walter Isaacson.pdf">
+                                        <button class="bookload-btn" onclick="href='./'" type="button">Download</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="latest-col" data-genre="novel" data-language="french" data-century="21">
+                                <div class="limg">
+                                    <img src="./media/Soie.jpg">
+                                </div>
+                                <div class="info" data-genre="novel">
+                                    <label for>Soie</label>
+                                    <p>Alessandro Baricco</p>
+                                    <a href="./Books/Soie (Alessandro Baricco) .pdf" download="Soie - Alessandro Baricco.pdf">
+                                        <button class="bookload-btn" onclick="href='./'" type="button">Download</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="latest-col" data-genre="history" data-language="french" data-century="20">
+                                <div class="limg">
+                                    <img src="./media/HistoireF_Bainville.jpg">
+                                </div>
+                                <div class="info">
+                                    <label for>Histoire de France</label>
+                                    <p>Jacques Bainville</p>
+                                    <a href="./Books/Histoire de France (Bainville, Jacques) (z-lib.org).pdf" download="Histoire de France - Jacques Bainville.pdf">
+                                        <button class="bookload-btn" onclick="href='./'" type="button">Download</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="latest-col" data-genre="art" data-language="english" data-century="21">
+                                <div class="limg">
+                                    <img src="./media/B&R_Archi.jpg">
+                                </div>
+                                <div class="info">
+                                    <label for>Baroque and Rococo Art</label>
+                                    <p>Robert Neuman</p>
+                                    <a href="./Books/Baroque and Rococo Art and Architecture (Robert Neuman) (z-lib.org).pdf" download="Baroque and Rococo Art and Architecture.pdf">
+                                        <button class="bookload-btn" onclick="href='./'" type="button">Download</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="footer-header">
+                        <label for>Contact Me.</label>
+                    </div>
+                    <div class="footer-content">
+                        <p>Reach out at to me :
+                            <a href="mailto:piecesofmind@gmail.com" style="text-decoration: none;"> piecesofmindfr@gmail.com<span>↗</span></a>
+                        </p>
+                    </div>
+                    <div class="footer-bottom" style="font-size: 13px; color: #222; text-align: center; font-family: whyteinkregu; margin-top: 40px;">PöM, ©2023 ALL RIGHTS RESERVED</div>
+                </footer>
+            </div>
+        </div>
+        <script src="./js/filter.js"></script>
+        <script src="./js/globalfilter.js"></script>
+    </body>
+</html>
